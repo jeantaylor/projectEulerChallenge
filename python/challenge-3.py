@@ -6,7 +6,7 @@ Problem 3: Largest Prime Factor
   Prime number: number that is only divisible by 1 and itself
   Factor: factor x factor = this multiplication answer
 
-  Expected Result >>> 
+  Expected Result >>> 6857
 
   First attempt: Works on 13195. Python freezes up when testing 600,851,475,143.
 
@@ -34,6 +34,15 @@ Problem 3: Largest Prime Factor
       print(max(primeFactors))
 """
 
+# Below solution works for test case, but still freezes when testing 600,851,475,143.
+
+
+def checkFactor(target, i):
+    if target % i == 0:
+        return True
+    else:
+        return False
+
 
 def checkPrime(num):
     for i in range(2, num):
@@ -42,19 +51,16 @@ def checkPrime(num):
     else:
         return True
 
+
 target = 13195
 #target = 6000851475
 primeFactors = []
 
-for i in range(2, target): 
-  if checkPrime(i):
-    j = target/i
-    if j.is_integer(): 
-      j = round(j)
-      if checkPrime(j) and j not in primeFactors: 
-        primeFactors.append(j)
-      if checkPrime(i) and i not in primeFactors: 
-          primeFactors.append(i)
+for i in range(2, target):
+    if checkFactor(target, i):
+        if checkPrime(i):
+            primeFactors.append(i)
+
 
 print(primeFactors)
 print(max(primeFactors))

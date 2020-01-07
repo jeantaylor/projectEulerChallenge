@@ -22,15 +22,15 @@ Problem 2: Even Fibonacci Numbers
 """
 
 evenFib = []
-fibx = 0 
-fiby = 1 
-fibz = 0 
+fibx = 0
+fiby = 1
+fibz = 0
 
 while fibz < 4000000:
-  fibz = fibx + fiby 
-  fibx = fiby 
-  fiby = fibz 
-  if fibz%2==0 and fibz!=4000000: 
-    evenFib.append(fibz)
+    fibz = fibx + fiby
+    fibx = fiby
+    fiby = fibz
+    if fibz % 2 == 0 and fibz != 4000000:
+        evenFib.append(fibz)
 
 print("The sum of all even Fibonacci numbers less than 4,000,000 is " + str(sum(evenFib)))

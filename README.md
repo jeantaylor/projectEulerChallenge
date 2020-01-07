@@ -10,8 +10,8 @@ I am currently using these problems to practice my Python and JavaScript skills.
 
 | Language   | Problems completed |
 | ---------- | ------------------ |
-| JavaScript | (not started yet)  |
-| Python     | 1-2                |
+| JavaScript | 1-2                |
+| Python     | 1-3                |
 
 ## A Note on solutions in this repo:
 
