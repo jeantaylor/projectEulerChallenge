@@ -53,7 +53,7 @@ def checkPrime(num):
 
 
 target = 13195
-#target = 6000851475
+#target = 600851475143
 primeFactors = []
 
 for i in range(2, target):
